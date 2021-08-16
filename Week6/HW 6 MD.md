@@ -9,12 +9,12 @@ Save and submit the completed file for your homework submission.
 1. Create a secret user named `sysd`. 
     - `sudo adduser sysd`
 
-    <br>
+<br>
 
-    ![sudo](Week6\Images\sudo_adduser.png)
+![sudoadduser](Week6\Images\sudo_adduser.png)
 
 2. Give your secret user a password: 
-    - `sudo passwd sysd `
+    - `sudo passwd sysd ` 
 
 3. Give your secret user a system UID < 1000:
     - `sudo usermod -u 987 sysd`
