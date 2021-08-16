@@ -11,7 +11,7 @@ Save and submit the completed file for your homework submission.
 
 <br>
 
-![sudoadduser](Week6\Images\sudo_adduser.png)
+![sudoadduser](Images\sudo_adduser.png)
 
 2. Give your secret user a password: 
     - `sudo passwd sysd ` 
