@@ -112,8 +112,8 @@ Before getting started, you should verify that you do not have any instances of 
     $ sudo apt -y remove ufw
     ```
 
-    ![picture](images/Capture1.png)
-
+    ![picture](Images/Capture1.png)
+   
 #### Enable and start `firewalld`
 
 By default, these service should be running. If not, then run the following commands:
