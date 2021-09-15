@@ -112,7 +112,7 @@ Before getting started, you should verify that you do not have any instances of 
     $ sudo apt -y remove ufw
     ```
 
-    ![picture](images/Capture1.PNG)
+    ![picture](images/Capture1.png)
 
 #### Enable and start `firewalld`
 
@@ -125,7 +125,7 @@ By default, these service should be running. If not, then run the following comm
     $ sudo systemctl start firewalld
     ```
 
-    ![picture](images/Capture2.PNG)
+    ![picture](images/Capture2.png)
 
   Note: This will ensure that `firewalld` remains active after each reboot.
 
@@ -148,7 +148,7 @@ Next, lists all currently configured firewall rules. This will give you a good i
     $ sudo firewall-cmd --list-all
     ```
 
-    ![picture](images/Capture3.PNG)
+    ![picture](images/Capture3.png)
 
 - Take note of what Zones and settings are configured. You many need to remove unneeded services and settings.
 
@@ -160,7 +160,7 @@ Next, lists all currently configured firewall rules. This will give you a good i
     $ sudo firewall-cmd --get-services
     ```
 
-![picture](images/Capture4.PNG)
+![picture](images/Capture4.png)
 
 - We can see that the `Home` and `Drop` Zones are created by default.
 
@@ -173,7 +173,7 @@ Next, lists all currently configured firewall rules. This will give you a good i
     $ sudo firewall-cmd --list-all-zones
     ```
 
-    ![picture](images/Capture5.PNG)
+    ![picture](images/Capture5.png)
 
 - We can see that the `Public` and `Drop` Zones are created by default. Therefore, we will need to create Zones for `Web`, `Sales`, and `Mail`.
 
@@ -187,7 +187,7 @@ Next, lists all currently configured firewall rules. This will give you a good i
     $ sudo firewall-cmd --new-zone=Mail --permanent
     ```
 
-    ![picture](images/Capture6.PNG)
+    ![picture](images/Capture6.png)
 
 #### Set the zones to their designated interfaces:
 
@@ -200,9 +200,9 @@ Next, lists all currently configured firewall rules. This will give you a good i
     $ sudo firewall-cmd --zone=Mail --add-interface=ETH3
     ```
 
-    ![picture](images/Capture7.PNG)
+    ![picture](images/Capture7.png)
 
-    ![picture](images/Capture8.PNG)
+    ![picture](images/Capture8.png)
 
 
 
@@ -238,9 +238,9 @@ Next, lists all currently configured firewall rules. This will give you a good i
     $ sudo firewall-cmd --permanent --add-service=pop3 --zone=Mail
     ```
 
-    ![picture](images/Capture9.PNG)
+    ![picture](images/Capture9.png)
 
-    ![picture](images/Capture10.PNG)
+    ![picture](images/Capture10.png)
 
 
 - What is the status of `http`, `https`, `smtp` and `pop3`?
@@ -257,7 +257,7 @@ Next, lists all currently configured firewall rules. This will give you a good i
     $ sudo firewall-cmd --permanent --zone=drop --add-source=76.34.169.118
     ```
 
-    ![picture](images/Capture11.PNG)
+    ![picture](images/Capture11.png)
 
 #### Make rules permanent then reload them:
 
@@ -289,11 +289,11 @@ Now, we'll want to provide truncated listings of all currently **active** zones.
     ```bash
     $ sudo firewall-cmd --zone=public --permanent --add-rich-rule="rule family=ipv4 source address=138.138.0.3 reject"
     ```
-    ![picture](images/Capture12.PNG)
+    ![picture](images/Capture12.png)
 
     *Rules in the public zone are --permanent by default. 
 
-    ![picture](images/Capture16.PNG)
+    ![picture](images/Capture16.png)
 
 
 #### Block Ping/ICMP Requests
@@ -306,7 +306,7 @@ Harden your network against `ping` scans by blocking `icmp ehco` replies.
     $ sudo firewall-cmd --permanent --zone=public --add-icmp-block=echo-reply --add-icmp-block=echo-request
     ```
 
-    ![picture](images/Capture13.PNG)
+    ![picture](images/Capture13.png)
 
 #Don't forget to reload after creating rules or blocks or altering zones to view in the zone information. 
 
@@ -456,14 +456,14 @@ Answer the following:
 
     Answer: There's an external source attempting to get the home network to click on an italian spam campaign that will then download an executable file. 
 
-    ![picture](images/Capture14.PNG)
+    ![picture](images/Capture14.png)
 
 
 2. What was the adversarial motivation (purpose of attack)?
 
     Answer: The motivation of the attack is to get the user to download the executable file, a decoy PDF attachment that will then install malware of the users computer. 
 
-    ![picture](images/Capture15.PNG)
+    ![picture](images/Capture15.png)
 
 
 3. Describe observations and indicators that may be related to the perpetrators of the intrusion. Categorize your insights according to the appropriate stage of the cyber kill chain, as structured in the following table.
