@@ -1,3 +1,4 @@
+
 ## Week 6 Homework Submission File: Advanced Bash - Owning the System
 
 Please edit this file by adding the solution commands on the line below the prompt. 
@@ -9,9 +10,7 @@ Save and submit the completed file for your homework submission.
 1. Create a secret user named `sysd`. 
     - `sudo adduser sysd`
 
-<img src="sudo_adduser.png"> 
-
-![sudoadduser](.\Images\sudo_adduser.png)
+![picture](Images\sudo_adduser.png)
 
 2. Give your secret user a password: 
     - `sudo passwd sysd ` 
