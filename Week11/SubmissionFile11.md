@@ -113,6 +113,7 @@ Before getting started, you should verify that you do not have any instances of 
     ```
 
     ![picture](Images/Capture1.png)
+    <img src="Images/Capture1.png" />
    
 #### Enable and start `firewalld`
 
