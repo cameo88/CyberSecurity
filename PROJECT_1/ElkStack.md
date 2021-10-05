@@ -5,6 +5,7 @@ The files in this repository were used to configure the network depicted below.
 Elk Diagram
 <img src="Images/ElkDiagram.PNG" />
 
+![ElkDiagram](Images\ElkDiagram.png)
 
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the **YAML** file may be used to install only certain pieces of it, such as Filebeat.
@@ -54,6 +55,7 @@ The configuration details of each machine may be found below.
 | Web-1    |   Server |  10.0.0.5  | Linux            |
 | Web-2    |  Server  |  10.0.0.6  | Linux            |
 | Elk-Server| Monitoring Server  | 10.1.0.5 |Linux    |
+| Cameo's Computer | Host | My IP | Windows | 
 
 ### Access Policies
 
@@ -78,6 +80,7 @@ A summary of the access policies in place can be found in the table below.
 |Elk Server | No            | 10.1.0.5  |
 | Web-1 |   No              | 10.0.0.0/16 - 10.1.0.0/16 |
 | Web-2 |   No | 10.0.0.0/16 - 10.1.0.0/16 | 
+|Cameo's Computer | Yes | IP | 
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
@@ -124,12 +127,16 @@ These Beats allow us to collect the following information from each machine:
 
     Filebeat is a light-weight shipper that centralizes and forwards data logs.
     Metricbeat is also a light-weight shipper that collects metric from your system and services. From CPU to Memory, Load to Network and Redis to NGINX and much more it is a light-weight way to send system and service statistics. Metricbeat collects data from your filebeat and sends it to your monitoring cluster.   
+    
+    For exmaple, Filebeat would collect changed passwords or modified files with a timestamp. 
+
+    
+
 
 *^^ cameo change the above description* 
 
-### Using the Playbook
+### Using the Playbook 
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
-
 
 
 SSH into the control node and follow the steps below: 
@@ -137,10 +144,13 @@ SSH into the control node and follow the steps below:
 - Update the _____ file to include...
 - Run the playbook, and navigate to ____ to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+- Answer the following questions to fill in the blanks:
+
+- Which file is the playbook? Where do you copy it?
+
+- Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
+
+- Which URL do you navigate to in order to check that the ELK server is running?
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc.
 
@@ -149,7 +159,7 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
         cd /etc/ansible/files then run theses below
         ansible-playbook install-elk.yml
         ansible-playbook filebeat-playbook.yml and ansible-playbook metricbeat-playbook.yml
-        http://20.80.180.39:5601/app/kibana
+        http://20.80.180.39:5601/app/kibana 
 
 
 ### Below are the actual screenshots of the commands I ran:
@@ -160,11 +170,9 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
 
 <br>
 
-
 ![docker ps output](Images\metricbeat-status.PNG)
 
 <br>
-
 
 ### Install and launch filebeat
 
@@ -172,12 +180,11 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
 
 <br>
 
-## Install and launch metricbeat
+### Install and launch metricbeat
 
 ![install-metricbeat](Images\install-metricbeat.PNG)
 
 <br>
-
 
 ### Load Kibana webpage
 
