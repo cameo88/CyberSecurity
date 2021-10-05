@@ -3,10 +3,8 @@
 The files in this repository were used to configure the network depicted below.
 
 Elk Diagram
-<img src="Images/ElkDiagram.PNG" /> 
 
 ![ElkDiagram](Images/ElkDiagram.png)
-
 
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the **YAML** file may be used to install only certain pieces of it, such as Filebeat.
@@ -100,7 +98,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running **docker ps** after successfully configuring the ELK instance.
 
-![docker ps output](Images\docker-ps.PNG)
+![docker ps output](Images/docker-ps.PNG)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -115,9 +113,9 @@ Specify which Beats you successfully installed:
         Filebeats
         Metricbeats
 
-![docker ps output](Images\filebeat-status.PNG)
+![docker ps output](Images/filebeat-status.PNG)
 
-![docker ps output](Images\metricbeat-status.PNG)
+![docker ps output](Images/metricbeat-status.PNG)
 
 
 These Beats allow us to collect the following information from each machine:
@@ -171,22 +169,22 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
 
 <br>
 
-![docker ps output](Images\metricbeat-status.PNG)
+![docker ps output](Images/metricbeat-status.PNG)
 
 <br>
 
 ### Install and launch filebeat
 
-![install-filebeat](Images\install-filebeat.PNG)
+![install-filebeat](Images/install-filebeat.PNG)
 
 <br>
 
 ### Install and launch metricbeat
 
-![install-metricbeat](Images\install-metricbeat.PNG)
+![install-metricbeat](Images/install-metricbeat.PNG)
 
 <br>
 
 ### Load Kibana webpage
 
-![load-kibana](Images\load-kibana.PNG)
+![load-kibana](Images/load-kibana.PNG)
