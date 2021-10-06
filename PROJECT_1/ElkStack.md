@@ -80,7 +80,10 @@ A summary of the access policies in place can be found in the table below.
 |Elk Server | No            | 10.1.0.5  |
 | Web-1 |   No              | 10.0.0.0/16 - 10.1.0.0/16 |
 | Web-2 |   No | 10.0.0.0/16 - 10.1.0.0/16 | 
-|Cameo's Computer | Yes | IP | 
+|Cameo's Computer | Yes | My IP | 
+
+<br>
+
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
@@ -123,38 +126,27 @@ These Beats allow us to collect the following information from each machine:
 
 In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., 
 
-    Filebeat is a light-weight shipper that centralizes and forwards data logs.
-    Metricbeat is also a light-weight shipper that collects metric from your system and services. From CPU to Memory, Load to Network and Redis to NGINX and much more it is a light-weight way to send system and service statistics. Metricbeat collects data from your filebeat and sends it to your monitoring cluster.   
+    Filebeat is a lightweight container that gathers and forwards data logs.
+    Metricbeat is a lightweight container as well that collects metric from your system and services. CPU, Memory, Redis, NGINX and much more it is a simple way to send system and service statistics. Metricbeat collects data from your filebeat and sends it to your monitoring cluster.   
     
     For exmaple, Filebeat would collect changed passwords or modified files with a timestamp. 
-
-
-*^^ cameo change the above description* 
+ 
 
 ### Using the Playbook 
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
-
-SSH into the control node and follow the steps below: 
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
-
-- Answer the following questions to fill in the blanks:
-
-- Which file is the playbook? Where do you copy it?
-
-- Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
-
-- Which URL do you navigate to in order to check that the ELK server is running?
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc.
+As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc.
 
 ### Commands I used to run the ansible playbooks and update files:
 
-        cd /etc/ansible/files then run theses below
+        cd /etc/ansible/files then run theses below:
+        
         ansible-playbook install-elk.yml
-        ansible-playbook filebeat-playbook.yml and ansible-playbook metricbeat-playbook.yml
+        
+        ansible-playbook filebeat-playbook.yml 
+        
+        ansible-playbook metricbeat-playbook.yml
+
         http://20.80.180.39:5601/app/kibana 
 
 
@@ -164,7 +156,6 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
 
 ### Configure Elk VM with Docker
 
-<br>
 
 ![docker ps output](Images/metricbeat-status.PNG)
 
