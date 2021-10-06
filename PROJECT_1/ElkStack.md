@@ -1,10 +1,11 @@
 ## Automated ELK Stack Deployment
 
+
 The files in this repository were used to configure the network depicted below.
 
 Elk Diagram
 
-![ElkDiagram](Images/ElkDiagram.png)
+![ElkDiagram](Images/ElkDiagram2.png)
 
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the **YAML** file may be used to install only certain pieces of it, such as Filebeat.
@@ -28,7 +29,7 @@ Load balancing ensures that the application will be highly **available**, in add
 
 What aspect of security do load balancers protect? 
 
-    Load balancers protect the availability of an application while preventing Dos attacks by distrubuting the network across multiple servers.
+    Load balancers protect the availability of an application while preventing DoS attacks by distrubuting the network across multiple servers.
     
     Load balancers provide a public IP address and then receieves traffic that is routed to multiple servers, all which can be accessed by the internet. 
 
@@ -83,7 +84,7 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-What is the main advantage of automating configuration with Ansible?
+What is the main advantage of automating configuration with Ansible? 
 
         An advantage to automating the ELK machine with Ansible is that, should it be compromized in any way, Ansible will deploy its reconstruction through a set of scripts in a file. This file is readable to everyone and can recreate an etire system in a short amount of time. Ansible has the ability to deploy systems on thousands of computers at a time.
 
@@ -120,16 +121,12 @@ Specify which Beats you successfully installed:
 
 These Beats allow us to collect the following information from each machine:
 
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., 
-
-**Winlogbeat** collects Windows logs, which we use to track user logon events, etc._
+In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., 
 
     Filebeat is a light-weight shipper that centralizes and forwards data logs.
     Metricbeat is also a light-weight shipper that collects metric from your system and services. From CPU to Memory, Load to Network and Redis to NGINX and much more it is a light-weight way to send system and service statistics. Metricbeat collects data from your filebeat and sends it to your monitoring cluster.   
     
     For exmaple, Filebeat would collect changed passwords or modified files with a timestamp. 
-
-    
 
 
 *^^ cameo change the above description* 
