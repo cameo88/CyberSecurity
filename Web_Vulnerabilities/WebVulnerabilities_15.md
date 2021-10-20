@@ -1,8 +1,8 @@
-# Unit 15 Homework
+# Unit 15
 
 ## Overview
 
-In this homework scenario, you will continue as an application security engineer at Replicants. Replicants created several new web applications and would like you to continue testing them for vulnerabilities. Additionally, your manager would like you to research and test a security tool called **BeEF** in order to understand the impact it could have on the organization if Replicants was targeted with this tool. 
+In this scenario, we will continue as an application security engineer at Replicants. Replicants created several new web applications and would like you to continue testing them for vulnerabilities. Additionally, your manager would like you to research and test a security tool called **BeEF** in order to understand the impact it could have on the organization if Replicants was targeted with this tool. 
 
 ### Lab Environment
 
@@ -144,7 +144,7 @@ When complete, submit the file on BCS.
 
 5. **Deliverable**: Take a screen shot confirming that this exploit was successfully executed and provide 2-3 sentences outlining mitigation strategies. 
 
-Mititgating this starts with the developement proecss. A developer can limit a users upload capabilities to to JPG, PNG files only. The developer can create the website so that only the desired input is accepted and all other submissions receive an error. For example, if the wesbite requests an email be entered, all other submissions will receive an error. This kind of injection can also be avoided by using a drop down menu instead of typing out input. 
+        Mititgating this starts with the developement proecss. A developer can limit a users upload capabilities to to JPG, PNG files only. The developer can create the website so that only the desired input is accepted and all other submissions receive an error. For example, if the wesbite requests an email be entered, all other submissions will receive an error. This kind of injection can also be avoided by using a drop down menu instead of typing out input. 
 
 ### Web Application 2: *A Brute Force to Be Reckoned With*
 
@@ -217,8 +217,8 @@ Mititgating this starts with the developement proecss. A developer can limit a u
 
   <img src="Images/Capture19.PNG" /> 
 
-  This exploit was successfully executed. This brute force attack shows how easy it is to figure out a username and password from a probabale list. 
-  A few strategies to mitigate this problem is to require complex usernames and passwords, user lockout after a certain number of failed attempts and requiring multiple-factor authentication. 
+     This exploit was successfully executed. This brute force attack shows how easy it is to figure out a username and password from a probabale list. 
+     A few strategies to mitigate this problem is to require complex usernames and passwords, user lockout after a certain number of failed attempts and requiring multiple-factor authentication.
 
 ### Web Application 3: *Where's the BeEF?*
 
@@ -342,7 +342,8 @@ Mititgating this starts with the developement proecss. A developer can limit a u
 
 6. **Deliverable**: Take a screen shot confirming that this exploit was successfully executed and provide 2-3 sentences outlining mitigation strategies. 
 
-We see from this successful attack that it is quite simple to spoof a login page and get a users login credentials by using a script and mimicking a login page. The first way to mitigate this kind of attack is to make users aware of the dangers of phishing emails, spoofed websites, login pages, and executable files. 
+
+       We see from this successful attack that it is quite simple to spoof a login page and get a users login credentials by using a script and mimicking a login page. The first way to mitigate this kind of attack is to make users aware of the dangers of phishing emails, spoofed websites, login pages, and executable files.
 
 
 ---
